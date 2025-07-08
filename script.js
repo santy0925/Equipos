@@ -12,33 +12,36 @@ const equipos = [
   { nombre: "Custom 1 - Platform ", integrantes: 7, asistencia: "On-site" },
 ];
 
-document.getElementById("buscarEquipo").addEventListener("input", function () {
-  const busqueda = this.value.trim().toLowerCase();
-  const resultado = document.getElementById("resultado");
+const resultado = document.getElementById("resultado");
+const inputBuscar = document.getElementById("buscarEquipo");
 
-  if (busqueda.length === 0) {
-    resultado.innerHTML = "";
+function mostrarEquipos(lista) {
+  if (lista.length === 0) {
+    resultado.innerHTML = `<div class="error-message">❌ No se encontraron equipos.</div>`;
     return;
   }
 
-  const encontrados = equipos.filter(eq =>
-    eq.nombre.toLowerCase().includes(busqueda)
-  );
-
-  if (encontrados.length === 0) {
-    resultado.innerHTML = `<div class="error-message">❌ No se encontró el equipo "${busqueda}".</div>`;
-    return;
-  }
-
-  resultado.innerHTML = encontrados
-    .map(
-      eq => `
+  resultado.innerHTML = lista
+    .map(eq => `
       <div class="team-card">
         <h3>🧩 Equipo: ${eq.nombre}</h3>
         <p><strong>Integrantes:</strong> ${eq.integrantes}</p>
         <p><strong>Tipo de Asistencia:</strong> ${eq.asistencia}</p>
       </div>
-    `
-    )
+    `)
     .join("");
+}
+
+// Mostrar todos los equipos inicialmente
+mostrarEquipos(equipos);
+
+// Filtrar al escribir
+inputBuscar.addEventListener("input", function () {
+  const busqueda = this.value.trim().toLowerCase();
+
+  const filtrados = equipos.filter(eq =>
+    eq.nombre.toLowerCase().includes(busqueda)
+  );
+
+  mostrarEquipos(filtrados);
 });

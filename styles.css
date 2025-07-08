@@ -2,91 +2,53 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #a8a8a8;
+  background-color: #e5e5e5;
 }
 
 .container {
-  max-width: 800px;
-  margin: 40px auto;
-  background-color: #fff;
+  max-width: 900px;
+  margin: 2rem auto;
   padding: 2rem;
+  background: white;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.search-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+h1 {
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 input[type="text"] {
-  padding: 10px;
-  border: 1px solid #ccd5df;
-  border-radius: 8px;
+  width: 100%;
+  padding: 0.75rem;
   font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+#resultado {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
 .team-card {
-  background-color: #e6f1ff;
-  border-left: 5px solid #007bff;
+  background: #f9f9f9;
   padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .team-card h3 {
-  margin: 0 0 0.5rem 0;
-  color: #0056b3;
-}
-
-.team-card p {
-  margin: 0.3rem 0;
+  margin-top: 0;
+  color: #2c3e50;
 }
 
 .error-message {
-  color: red;
+  color: #d63031;
   font-weight: bold;
-  margin-top: 1rem;
-}
-
-@media (max-width: 768px) {
-  .container {
-    margin: 20px;
-    padding: 1rem;
-  }
-
-  .header h1 {
-    font-size: 1.5rem;
-  }
-
-  input[type="text"] {
-    font-size: 0.95rem;
-    padding: 8px;
-  }
-
-  .team-card {
-    font-size: 0.95rem;
-    padding: 0.8rem;
-  }
-
-  .team-card h3 {
-    font-size: 1.1rem;
-  }
+  grid-column: 1 / -1;
+  text-align: center;
 }

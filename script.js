@@ -10,6 +10,7 @@ const equipos = [
   { nombre: "Sun Express", integrantes: 7, asistencia: "On-site" , DiasDeasistencia: "Martes, Miercoles, Viernes" },
   { nombre: "Next Gen (Delta - Omega - AM ) y Core UI", integrantes: 17, asistencia: "On-site" , DiasDeasistencia: "Lunes, Martes, Miercoles" },
   { nombre: "Custom 1 - Platform ", integrantes: 7, asistencia: "On-site" , DiasDeasistencia: "Miercoles, Jueves, Viernes" },
+  { nombre: "Scrum Master", integrantes: 12, asistencia: "On-site" , DiasDeasistencia: "N/A" },
 ];
 
 const resultado = document.getElementById("resultado");
@@ -24,7 +25,7 @@ function mostrarEquipos(lista) {
   resultado.innerHTML = lista
     .map(eq => `
       <div class="team-card">
-        <h3>🧩 Equipo: ${eq.nombre}</h3>
+        <h3>Equipo: ${eq.nombre}</h3>
         <p><strong>Integrantes:</strong> ${eq.integrantes}</p>
         <p><strong>Tipo de Asistencia:</strong> ${eq.asistencia}</p>
          <p><strong>Dias de Asistencia:</strong> ${eq.DiasDeasistencia}</p>

@@ -14,7 +14,7 @@ const equipos = [
   { nombre: "Scrum Master", integrantes: 12, asistencia: "On-site", DiasDeasistencia: "N/A" },
 ];
 
-// Referencias a elementos del DOM
+// Referencias a elementos del DOM  (Document Object Model)
 const resultado = document.getElementById("resultado");
 const inputBuscar = document.getElementById("buscarEquipo");
 const totalEquipos = document.getElementById("totalEquipos");
@@ -28,7 +28,7 @@ function actualizarEstadisticas(lista) {
   equiposMostrados.textContent = lista.length;
 }
 
-// Función para crear badges de días
+// Función para crear badges de días (Insignia de asistencia)
 function crearBadgesDias(dias) {
   if (dias === "N/A") {
     return '<span class="day-badge">N/A</span>';

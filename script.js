@@ -37,7 +37,7 @@ function crearBadgesDias(dias) {
   return dias.split(', ').map(dia => 
     `<span class="day-badge">${dia}</span>`
   ).join('');
-}
+}  
 
 // Función principal para mostrar equipos
 function mostrarEquipos(lista) {

@@ -71,7 +71,7 @@ function mostrarEquipos(lista) {
               <i class="fas fa-building"></i>
             </div>
             <div class="info-text">
-              <div class="info-label">Modalidad</div>
+              <div class="info-label">Tipo de Asistencia</div>
               <div class="info-value">${eq.asistencia}</div>
             </div>
           </div>

@@ -303,7 +303,7 @@ body::before {
   to { transform: rotate(360deg); }
 }
 
-/* Responsive Design */
+/* Responsive*/
 @media (max-width: 768px) {
   .container {
     padding: 10px;

@@ -220,7 +220,7 @@ body::before {
 }
 
 .info-icon.days {
-  background: linear-gradient(135deg, #ffce83, #fb8c00);
+  background: linear-gradient(135deg, #fb8c00, #ffc46d);
 }
 
 .info-text {

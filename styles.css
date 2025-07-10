@@ -212,15 +212,15 @@ body::before {
 }
 
 .info-icon.members {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #800091, #fffc54);
 }
 
 .info-icon.attendance {
-  background: linear-gradient(135deg, #56ab2f, #87ffd3);
+  background: linear-gradient(135deg, #007e5e, #ff0000);
 }
 
 .info-icon.days {
-  background: linear-gradient(135deg, #fb8c00, #ffc46d);
+  background: linear-gradient(135deg, #d17300, #0b00a0);
 }
 
 .info-text {
@@ -250,7 +250,7 @@ body::before {
 }
 
 .day-badge {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #290041, #a16100);
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
